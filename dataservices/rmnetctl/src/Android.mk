@@ -17,5 +17,6 @@ endif
 LOCAL_MODULE := librmnetctl
 LOCAL_MODULE_TAGS := optional
 LOCAL_PRELINK_MODULE := false
+LOCAL_VENDOR_MODULE := true
 
 include $(BUILD_SHARED_LIBRARY)

@@ -35,7 +35,7 @@ PRODUCT_MANUFACTURER := Huawei
 
 # AICP Device Maintainers
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    DEVICE_MAINTAINERS="doc HD (semdoc), Davor B (LorD ClockaN)"
+    DEVICE_MAINTAINERS="Alex T (GreekDragon), doc HD (semdoc), Davor B (LorD ClockaN)"
 
 # Device Fingerprint
 PRODUCT_BUILD_PROP_OVERRIDES += \

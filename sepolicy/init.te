@@ -36,3 +36,43 @@ allow init sysfs_gpu_tuning:file setattr;
 allow init sysfs_ramdumps:file rw_file_perms;
 # todo fix missing labels
 allow init sysfs:file { setattr getattr };
+
+allow init ion_device:chr_file ioctl;
+allow init proc:file { getattr open setattr read };
+allow init property_socket:sock_file write;
+# noatsecure party time
+allow init cameraserver:process noatsecure;
+allow init adbd:process noatsecure;
+allow init audioserver:process noatsecure;
+allow init fsck:process noatsecure;
+allow init mediaserver:process noatsecure;
+allow init recovery_refresh:process noatsecure;
+allow init tee:process noatsecure;
+allow init ueventd:process noatsecure;
+allow init vendor_init:process noatsecure;
+allow init vold:process noatsecure;
+allow init bootanim:process noatsecure;
+allow init healthd:process noatsecure;
+allow init hwservicemanager:process noatsecure;
+allow init netd:process noatsecure;
+allow init recovery_persist:process noatsecure;
+allow init rild:process noatsecure;
+allow init servicemanager:process noatsecure;
+allow init tzdatacheck:process noatsecure;
+allow init update_verifier:process noatsecure;
+allow init vdc:process noatsecure;
+allow init vndservicemanager:process noatsecure;
+allow init zygote:process noatsecure;
+allow init netmgrd:process noatsecure;
+allow init otapreopt_slot:process noatsecure;
+allow init drmserver:process noatsecure;
+allow init installd:process noatsecure;
+allow init mediacodec:process noatsecure;
+allow init mediadrmserver:process noatsecure;
+allow init mediaextractor:process noatsecure;
+allow init wificond:process noatsecure;
+allow init keystore:process noatsecure;
+allow init per_proxy:process noatsecure;
+allow init self:process execmem;
+
+allow init sysfs:file setattr;

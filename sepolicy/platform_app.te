@@ -14,3 +14,5 @@ allow platform_app oem_qmi_server:unix_stream_socket connectto;
 r_dir_file(platform_app, sysfs)
 
 allow platform_app nfc_service:service_manager find;
+allow platform_app boottime_prop:file read;
+allow platform_app system_app_data_file:dir r_dir_perms;

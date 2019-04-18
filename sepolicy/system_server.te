@@ -53,3 +53,12 @@ allow system_server vendor_data_file:file rw_file_perms;
 
 # leds 
 allow system_server sysfs_qpnp_26:file rw_file_perms;
+
+allow system_server vendor_framework_file:file { execute getattr open read };
+allow system_server vendor_framework_file:dir { getattr search };
+allow system_server sysfs:file { getattr open read };
+allow system_server proc:file r_file_perms;
+allow system_server sysfs_vibrator:file read;
+allow system_server bluetooth_prop:file { read };
+allow system_server ctl_bootanim_prop:file { read };
+allow system_server ctl_fuse_prop:file { read };

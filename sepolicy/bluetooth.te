@@ -2,4 +2,8 @@ allow bluetooth vendor_file:file { open read execute getattr };
 allow bluetooth boottime_prop:file read;
 allow bluetooth ctl_bootanim_prop:file read;
 allow bluetooth ctl_fuse_prop:file read;
-
+allow bluetooth contexthub_prop:file read;
+allow bluetooth ctl_bugreport_prop:file read;
+allow bluetooth ctl_console_prop:file read;
+allow bluetooth ctl_default_prop:file read;
+allow bluetooth ctl_dumpstate_prop:file read;

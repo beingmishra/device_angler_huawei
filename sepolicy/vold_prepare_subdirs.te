@@ -1,1 +1,3 @@
 allow vold_prepare_subdirs vold:unix_stream_socket { read write };
+allow vold_prepare_subdirs self:capability sys_admin;
+

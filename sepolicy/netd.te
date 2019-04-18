@@ -7,3 +7,4 @@ allow netd sysfs_wifi_mtu:file rw_file_perms;
 
 allow netd netd:capability { fsetid };
 
+allow netd sysfs:file { open write };

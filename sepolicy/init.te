@@ -76,3 +76,9 @@ allow init per_proxy:process noatsecure;
 allow init self:process execmem;
 
 allow init sysfs:file setattr;
+
+allow init hal_wifi_supplicant_default:process noatsecure;
+
+allow init bootstat:process noatsecure;
+
+allow init sysfs_power_management:file { open write };

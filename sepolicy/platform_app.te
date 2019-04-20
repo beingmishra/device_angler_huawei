@@ -19,3 +19,6 @@ allow platform_app system_app_data_file:dir r_dir_perms;
 allow platform_app contexthub_prop:file read;
 allow platform_app time:unix_stream_socket connectto;
 allow platform_app sysfs_thermal:dir search;
+allow platform_app ctl_bootanim_prop:file read;
+allow platform_app ctl_bugreport_prop:file read;
+allow platform_app ctl_console_prop:file read;

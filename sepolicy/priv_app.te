@@ -9,3 +9,7 @@ allow priv_app postinstall_file:filesystem getattr;
 allow priv_app proc_interrupts:file open;
 allow priv_app sysfs_android_usb:file open;
 allow priv_app sysfs_mac_address:file { getattr open read };
+allow priv_app ctl_bootanim_prop:file read;
+allow priv_app ctl_bugreport_prop:file read;
+allow priv_app contexthub_prop:file read;
+allow priv_app ctl_bugreport_prop:file read;

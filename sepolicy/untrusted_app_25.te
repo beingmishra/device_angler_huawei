@@ -1,0 +1,6 @@
+allow untrusted_app_25 boottime_prop:file read;
+allow untrusted_app_25 contexthub_prop:file read;
+allow untrusted_app_25 ctl_bootanim_prop:file read;
+allow untrusted_app_25 ctl_bugreport_prop:file read;
+allow untrusted_app_25 ctl_console_prop:file read;
+allow untrusted_app_25 ctl_default_prop:file read;

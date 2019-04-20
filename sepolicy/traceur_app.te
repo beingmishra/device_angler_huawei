@@ -1,0 +1,3 @@
+allow traceur_app boottime_prop:file read;
+allow traceur_app contexthub_prop:file read;
+allow traceur_app ctl_bootanim_prop:file read;

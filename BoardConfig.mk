@@ -180,3 +180,9 @@ BOARD_SUPPRESS_SECURE_ERASE := true
 # Legacy blob support
 TARGET_PROCESS_SDK_VERSION_OVERRIDE += \
     /vendor/bin/mm-qcamera-daemon=27
+
+# Vendor properties
+BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
+# Treble full override
+PRODUCT_FULL_TREBLE_OVERRIDE := true
+

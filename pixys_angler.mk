@@ -20,22 +20,19 @@
 # Inherit from the common product configuration
 $(call inherit-product, device/huawei/angler/aosp_angler.mk)
 
-# Inherit aicp's custom configuration
-$(call inherit-product, $(TOPDIR)vendor/aicp/config/common_full_phone.mk)
+# Inherit pixys's custom configuration
+$(call inherit-product, $(TOPDIR)vendor/pixys/config/common_full_phone.mk)
 
 # Screen Resolution for the Bootanimation
 TARGET_SCREEN_HEIGHT := 2560
 TARGET_SCREEN_WIDTH := 1440
-
-PRODUCT_NAME := aicp_angler
+TARGET_BOOT_ANIMATION_RES := 1440
+ 
+PRODUCT_NAME := pixys_angler
 PRODUCT_DEVICE := angler
 PRODUCT_BRAND := google
 PRODUCT_MODEL := Nexus 6P
 PRODUCT_MANUFACTURER := Huawei
-
-# AICP Device Maintainers
-PRODUCT_BUILD_PROP_OVERRIDES += \
-    DEVICE_MAINTAINERS="Alex T (GreekDragon), doc HD (semdoc), Davor B (LorD ClockaN)"
 
 # Device Fingerprint
 PRODUCT_BUILD_PROP_OVERRIDES += \

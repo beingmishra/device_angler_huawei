@@ -1,0 +1,3 @@
+add_lunch_combo pixys_angler-eng
+add_lunch_combo pixys_angler-userdebug
+add_lunch_combo pixys_angler-user

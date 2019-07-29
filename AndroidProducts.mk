@@ -16,4 +16,4 @@
 
 PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/aosp_angler.mk \
-    $(LOCAL_DIR)/aicp_angler.mk
+    $(LOCAL_DIR)/pixys_angler.mk

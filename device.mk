@@ -374,12 +374,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Write Manufacturer & Model information in created media files.
 # IMPORTANT: ONLY SET THIS PROPERTY TO TRUE FOR PUBLIC DEVICES
-ifneq ($(filter aosp_angler% aicp_angler%, $(TARGET_PRODUCT)),)
+#ifneq ($(filter aosp_angler% aicp_angler%, $(TARGET_PRODUCT)),)
 PRODUCT_PROPERTY_OVERRIDES += \
     media.recorder.show_manufacturer_and_model=true
-else
-$(error "you must decide whether to write manufacturer and model information into created media files for this device. ONLY ENABLE IT FOR PUBLIC DEVICE.")
-endif  #TARGET_PRODUCT
+#else
+#$(error "you must decide whether to write manufacturer and model information into created media files for this device. ONLY ENABLE IT FOR PUBLIC DEVICE.")
+#endif  #TARGET_PRODUCT
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.hwui.texture_cache_size=72 \
@@ -536,9 +536,8 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.oem_unlock_supported=1
 
 # Inherit custom memory configurations
-$(call inherit-product, vendor/aicp/config/phone-xxhdpi-3072-dalvik-heap.mk)
-$(call inherit-product, vendor/aicp/config/phone-xxhdpi-3072-hwui-memory.mk)
-
+$(call inherit-product, vendor/pixys/config/dalvik/phone-xxhdpi-3072-dalvik-heap.mk)
+$(call inherit-product, vendor/pixys/config/dalvik/phone-xxhdpi-3072-hwui-memory.mk)
 
 # drmservice prop
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -575,6 +574,10 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.mapper@2.0-service \
     gatekeeper.msm8994 \
     keystore.msm8994
+
+# loggy
+PRODUCT_PACKAGES += \
+    loggy.sh
 
 # b/29995499
 $(call add-product-sanitizer-module-config,cameraserver,never)

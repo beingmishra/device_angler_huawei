@@ -495,7 +495,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.camera.eis.enable=1 \
     persist.camera.is_type=4
 
-# For android_file$(TARGET_COPY_OUT_VENDOR)_config.h
+# For android_filesystem_config.h
 PRODUCT_PACKAGES += \
    fs_config_files
 
@@ -519,7 +519,7 @@ endif # aosp_angler
 PRODUCT_COPY_FILES += \
     device/huawei/angler/init.angler.diag.rc.userdebug:root/init.angler.diag.rc
 
-# sub$(TARGET_COPY_OUT_VENDOR) ramdump collection
+# subsystem ramdump collection
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.ssr.enable_ramdumps=0
 else # userdebug eng

@@ -57,12 +57,12 @@ on early-boot
     setrlimit 8 67108864 67108864
 
     # Busy loop to wait for devices booted by devstart_sh just in case device not ready
-    exec - root root system -- /system/bin/init.qcom.devwait.sh
+    exec - root root system -- /vendor/bin/init.qcom.devwait.sh
 
 on boot
     # execute script to set initial CPU settings
     # don't run as a service to avoid race conditions
-    exec - root system -- /system/bin/init.angler.power.sh
+    exec - root system -- /vendor/bin/init.angler.power.sh
 
     # Enable DEBUG_SUSPEND, DEBUG_EXIT_SUSPEND, and DEBUG_WAKEUP
     write /sys/module/wakelock/parameters/debug_mask 7
@@ -156,7 +156,7 @@ on post-fs
 
     start qseecomd
     # Busy loop to wait for qseecomd started
-    exec - root root system -- /system/bin/init.angler.qseecomd.sh
+    exec - root root system -- /vendor/bin/init.angler.qseecomd.sh
     # Start devices by sysfs trigger
     start devstart_sh
 

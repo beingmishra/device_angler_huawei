@@ -135,7 +135,8 @@ TARGET_RELEASETOOLS_EXTENSIONS := device/huawei/angler
 
 #SELinux
 include device/qcom/sepolicy/sepolicy.mk
-BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
+BOARD_SEPOLICY_DIRS += \
+    device/huawei/angler/sepolicy
 
 TARGET_USES_64_BIT_BINDER := true
 
